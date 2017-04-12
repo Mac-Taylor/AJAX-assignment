@@ -5,8 +5,8 @@ function retrieveQuestion(input) {
 
     let parent = document.querySelector('main');
    
-    let cat = document.querySelector('.category');
-    cat.textContent = input.category.title;
+    let ctgry = document.querySelector('main h2');
+    ctgry.textContent = input.category;
 
     let q = document.querySelector('.question');
     q.textContent = input.question;
@@ -22,13 +22,13 @@ function retrieveQuestion(input) {
 
 };
 
-window.addEventListener('load', function(){
+window.addEventListener('load', function() {
     
-let request = new XMLHttpRequest();
-request.open('GET', 'http://jservice.io/api/random');
-request.addEventListener('load', function(){
+    let request = new XMLHttpRequest();
+    request.open('GET', 'http://jservice.io/api/random');
 
-  /*  console.log(request.responseText);*/
+    request.addEventListener('load', function() {
+
     
     let response = JSON.parse(request.responseText);
     console.log(response);
