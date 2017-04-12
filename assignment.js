@@ -5,8 +5,8 @@ function retrieveQuestion(input) {
 
     let parent = document.querySelector('main');
    
-    let category = document.querySelector('.category');
-    category.textContent = input.category.title;
+    let cat = document.querySelector('.category');
+    cat.textContent = input.category.title;
 
     let q = document.querySelector('.question');
     q.textContent = input.question;
