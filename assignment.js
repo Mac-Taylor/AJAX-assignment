@@ -5,20 +5,11 @@ function retrieveQuestion(input) {
 
     let parent = document.querySelector('main');
    
-    let ctgry = document.querySelector('main h2');
+    let ctgry = document.querySelector('.category');
     ctgry.textContent = input.category;
 
     let q = document.querySelector('.question');
     q.textContent = input.question;
-
- /*  let el = document.createElement('li');
-    el.classList.add('question');
-
-    let q = document.createElement('p');
-    q.textContent = input.question;
-
-   parent.appendChild(el);
-    el.appendChild(q); */
 
 };
 
