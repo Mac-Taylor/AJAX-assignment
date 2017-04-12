@@ -5,8 +5,11 @@ function retrieveQuestion(input) {
 
     let parent = document.querySelector('main');
    
-    let ctgry = document.querySelector('.category');
+    let ctgry = document.querySelector('#category');
     ctgry.textContent = input.category;
+
+    let ptvalue = document.querySelector('#points');
+    ptvalue.textContent = 'For ' + input.value;
 
     let q = document.querySelector('.question');
     q.textContent = input.question;
@@ -28,6 +31,7 @@ window.addEventListener('load', function() {
         question: response[0].question,
         value: response[0].value,
         category: response[0].category.title,
+        
     };
     
 retrieveQuestion(input);
