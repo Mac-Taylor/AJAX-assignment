@@ -20,11 +20,14 @@ window.addEventListener('load', function() {
     
     let request = new XMLHttpRequest();
     request.open('GET', 'http://jservice.io/api/random');
+        
 
     request.addEventListener('load', function() {
 
     
     let response = JSON.parse(request.responseText);
+   
+    console.log(request.responseText);
     console.log(response);
 
     let input = {
